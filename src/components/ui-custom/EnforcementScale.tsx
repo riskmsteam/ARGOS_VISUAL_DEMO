@@ -27,7 +27,7 @@ export function EnforcementScale({ activeLevel, palette }: EnforcementScaleProps
         <div
             className="rounded-xl p-5"
             style={{
-                backgroundColor: palette.bgSecondary ?? palette.card,
+                backgroundColor: palette.secondary ?? palette.card,
                 border: `1px solid ${palette.border}`,
             }}
         >

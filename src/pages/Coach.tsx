@@ -59,7 +59,7 @@ export function Coach() {
         {/* Status Panel */}
         <div className="space-y-4">
           {/* Current Status */}
-          <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '200ms', opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '200ms', opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: palette.text }}>
               <Activity className="w-5 h-5" style={{ color: palette.accent }} />
               {t('currentStatus')}
@@ -114,7 +114,7 @@ export function Coach() {
           </div>
 
           {/* Quick Actions */}
-          <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '300ms', opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '300ms', opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: palette.text }}>
               <Settings className="w-5 h-5" style={{ color: palette.textMuted }} />
               {t('quickActions')}

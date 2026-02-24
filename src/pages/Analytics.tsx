@@ -78,7 +78,7 @@ export function Analytics() {
               <div
                 key={metric.label}
                 className="border rounded-xl p-4 card-hover animate-fadeIn"
-                style={{ animationDelay: `${index * 50}ms`, opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}
+                style={{ animationDelay: `${index * 50}ms`, opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}
               >
                 <div className="flex items-center gap-2 mb-2">
                   <metric.icon className={`w-4 h-4 ${metric.negative ? 'text-[#E74C3C]' : ''}`} style={metric.negative ? {} : { color: palette.textMuted }} />
@@ -94,13 +94,13 @@ export function Analytics() {
           {/* Charts Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Motor Distribution */}
-            <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '200ms', opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '200ms', opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}>
               <h3 className="text-lg font-semibold mb-4" style={{ color: palette.text }}>{t('motorDistribution')}</h3>
               <MotorDistributionChart data={mockMotorDistribution} />
             </div>
 
             {/* Win Rate Evolution */}
-            <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '300ms', opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-5 animate-fadeIn" style={{ animationDelay: '300ms', opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold" style={{ color: palette.text }}>{t('winRateEvolution')}</h3>
                 <span className="text-xs px-2 py-1 rounded" style={{ color: palette.textMuted, backgroundColor: `${palette.border}50` }}>
@@ -124,7 +124,7 @@ export function Analytics() {
               <div
                 key={item.motor}
                 className="border rounded-xl p-5 animate-fadeIn"
-                style={{ animationDelay: `${index * 100}ms`, opacity: 0, backgroundColor: palette.bg, borderColor: palette.border }}
+                style={{ animationDelay: `${index * 100}ms`, opacity: 0, backgroundColor: palette.background, borderColor: palette.border }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold" style={{ color: item.color }}>{item.motor}</h3>
@@ -158,7 +158,7 @@ export function Analytics() {
 
       {activeTab === 'psi' && (
         <div className="space-y-6 animate-fadeIn">
-          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
             <h3 className="text-lg font-semibold mb-4" style={{ color: palette.text }}>{t('psiImpactOnStakes')}</h3>
             <PsiImpactChart data={mockPsiImpactData} />
           </div>
@@ -169,7 +169,7 @@ export function Analytics() {
               { label: t('psiMinimum'), value: '0.082', desc: t('duringLockout') },
               { label: t('psiMaximum'), value: '0.714', desc: t('optimalConditions') },
             ].map((stat) => (
-              <div key={stat.label} className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+              <div key={stat.label} className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
                 <p className="text-xs" style={{ color: palette.textMuted }}>{stat.label}</p>
                 <p className="text-2xl font-bold font-mono" style={{ color: palette.accent }}>{stat.value}</p>
                 <p className="text-xs mt-1" style={{ color: palette.textMuted }}>{stat.desc}</p>
@@ -181,7 +181,7 @@ export function Analytics() {
 
       {activeTab === 'drawdowns' && (
         <div className="space-y-6 animate-fadeIn">
-          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
             <h3 className="text-lg font-semibold mb-4" style={{ color: palette.text }}>{t('drawdownOverTime')}</h3>
             <DrawdownChart data={mockDrawdownData} />
           </div>
@@ -193,7 +193,7 @@ export function Analytics() {
               { label: t('recoveryTime'), value: '8 trades', color: '#4A9EFF' },
               { label: t('currentDD'), value: '-4.2%', color: '#00D4AA' },
             ].map((stat) => (
-              <div key={stat.label} className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+              <div key={stat.label} className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
                 <p className="text-xs" style={{ color: palette.textMuted }}>{stat.label}</p>
                 <p className="text-xl font-bold font-mono" style={{ color: stat.color }}>{stat.value}</p>
               </div>
@@ -205,7 +205,7 @@ export function Analytics() {
       {activeTab === 'rachas' && (
         <div className="space-y-6 animate-fadeIn">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border rounded-xl p-5" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-5" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <h3 className="text-lg font-semibold mb-4" style={{ color: palette.text }}>{t('winStreaks')}</h3>
               <div className="space-y-3">
                 {[
@@ -214,7 +214,7 @@ export function Analytics() {
                   { count: 4, freq: 15, last: t('today') },
                   { count: 3, freq: 24, last: t('yesterday') },
                 ].map((r) => (
-                  <div key={r.count} className="flex items-center justify-between p-3 rounded-lg" style={{ backgroundColor: palette.bgSecondary }}>
+                  <div key={r.count} className="flex items-center justify-between p-3 rounded-lg" style={{ backgroundColor: palette.secondary }}>
                     <div className="flex items-center gap-3">
                       <span className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-[#27AE60]" style={{ backgroundColor: 'rgba(39, 174, 96, 0.2)' }}>
                         {r.count}
@@ -230,7 +230,7 @@ export function Analytics() {
               </div>
             </div>
 
-            <div className="border rounded-xl p-5" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-5" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <h3 className="text-lg font-semibold mb-4" style={{ color: palette.text }}>{t('lossStreaks')}</h3>
               <div className="space-y-3">
                 {[
@@ -238,7 +238,7 @@ export function Analytics() {
                   { count: 3, freq: 6, last: t('today') },
                   { count: 2, freq: 18, last: t('yesterday') },
                 ].map((r) => (
-                  <div key={r.count} className="flex items-center justify-between p-3 rounded-lg" style={{ backgroundColor: palette.bgSecondary }}>
+                  <div key={r.count} className="flex items-center justify-between p-3 rounded-lg" style={{ backgroundColor: palette.secondary }}>
                     <div className="flex items-center gap-3">
                       <span className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-[#E74C3C]" style={{ backgroundColor: 'rgba(231, 76, 60, 0.2)' }}>
                         {r.count}

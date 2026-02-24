@@ -39,7 +39,7 @@ export function TradeEntry() {
         {/* Left Column - Status Info */}
         <div className="space-y-4 animate-fadeIn" style={{ animationDelay: '100ms', opacity: 0 }}>
           {/* Balance Card */}
-          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-5" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
             <div className="flex items-center justify-between mb-4">
               <span className="text-sm" style={{ color: palette.textMuted }}>{t('currentBalance')}</span>
               <Activity className="w-5 h-5" style={{ color: palette.textMuted }} />
@@ -51,7 +51,7 @@ export function TradeEntry() {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <div className="flex items-center gap-2 mb-2">
                 <TrendingDown className="w-4 h-4 text-[#E74C3C]" />
                 <span className="text-xs" style={{ color: palette.textMuted }}>{t('sessionDrawdown')}</span>
@@ -66,7 +66,7 @@ export function TradeEntry() {
               <p className="text-xs mt-1" style={{ color: palette.textMuted }}>{t('limitPercent')}</p>
             </div>
 
-            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <div className="flex items-center gap-2 mb-2">
                 <Zap className="w-4 h-4 text-[#F39C12]" />
                 <span className="text-xs" style={{ color: palette.textMuted }}>{t('currentStreak')}</span>
@@ -77,7 +77,7 @@ export function TradeEntry() {
           </div>
 
           {/* CTI */}
-          <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs mb-1" style={{ color: palette.textMuted }}>{t('ctiLabel')}</p>
@@ -91,11 +91,11 @@ export function TradeEntry() {
 
           {/* Motor & Time */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <p className="text-xs mb-2" style={{ color: palette.textMuted }}>{t('recommendedMotor')}</p>
               <MotorBadge motor="DYNAMIC" size="md" />
             </div>
-            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+            <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
               <div className="flex items-center gap-2 mb-2">
                 <Clock className="w-4 h-4" style={{ color: palette.textMuted }} />
                 <span className="text-xs" style={{ color: palette.textMuted }}>{t('sinceLastTrade')}</span>
@@ -108,7 +108,7 @@ export function TradeEntry() {
         {/* Right Column - Recommendation */}
         <div className="space-y-4 animate-fadeIn" style={{ animationDelay: '200ms', opacity: 0 }}>
           {/* Main Recommendation Card */}
-          <div className="border-2 rounded-xl p-6 glow-purple" style={{ backgroundColor: palette.bg, borderColor: palette.accent }}>
+          <div className="border-2 rounded-xl p-6 glow-purple" style={{ backgroundColor: palette.background, borderColor: palette.accent }}>
             <div className="text-center mb-6">
               <p className="text-sm font-medium uppercase tracking-wider mb-2" style={{ color: palette.accent }}>{t('argosRecommends')}</p>
               <p className="text-5xl font-bold font-mono" style={{ color: palette.text }}>${recommendedStake.toFixed(2)}</p>
@@ -116,17 +116,17 @@ export function TradeEntry() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="rounded-lg p-3 text-center" style={{ backgroundColor: palette.bgSecondary }}>
+              <div className="rounded-lg p-3 text-center" style={{ backgroundColor: palette.secondary }}>
                 <p className="text-xs" style={{ color: palette.textMuted }}>{t('motor')}</p>
                 <MotorBadge motor="DYNAMIC" size="sm" />
               </div>
-              <div className="rounded-lg p-3 text-center" style={{ backgroundColor: palette.bgSecondary }}>
+              <div className="rounded-lg p-3 text-center" style={{ backgroundColor: palette.secondary }}>
                 <p className="text-xs" style={{ color: palette.textMuted }}>Ψ</p>
                 <p className="text-lg font-mono" style={{ color: palette.accent }}>{mockStats.psi.toFixed(3)}</p>
               </div>
             </div>
 
-            <div className="rounded-lg p-3 mb-6" style={{ backgroundColor: palette.bgSecondary }}>
+            <div className="rounded-lg p-3 mb-6" style={{ backgroundColor: palette.secondary }}>
               <div className="flex items-center justify-between text-sm">
                 <span style={{ color: palette.textMuted }}>{t('kellyRaw')}</span>
                 <span className="font-mono" style={{ color: palette.text }}>7.1%</span>
@@ -154,14 +154,14 @@ export function TradeEntry() {
           </div>
 
           {/* Custom Stake Toggle */}
-          <div className="border rounded-xl p-4" style={{ backgroundColor: palette.bg, borderColor: palette.border }}>
+          <div className="border rounded-xl p-4" style={{ backgroundColor: palette.background, borderColor: palette.border }}>
             <label className="flex items-center gap-3 cursor-pointer">
               <input
                 type="checkbox"
                 checked={customStake}
                 onChange={(e) => setCustomStake(e.target.checked)}
                 className="w-4 h-4 rounded"
-                style={{ backgroundColor: palette.bgSecondary, borderColor: palette.border, accentColor: palette.accent }}
+                style={{ backgroundColor: palette.secondary, borderColor: palette.border, accentColor: palette.accent }}
               />
               <span className="text-sm" style={{ color: palette.text }}>{t('useDifferentStake')}</span>
             </label>
@@ -175,7 +175,7 @@ export function TradeEntry() {
                     value={stakeValue}
                     onChange={(e) => setStakeValue(e.target.value)}
                     className="flex-1 border rounded-lg px-3 py-2 font-mono focus:outline-none"
-                    style={{ backgroundColor: palette.bgSecondary, color: palette.text, borderColor: palette.border }}
+                    style={{ backgroundColor: palette.secondary, color: palette.text, borderColor: palette.border }}
                     onFocus={(e) => e.currentTarget.style.borderColor = palette.accent}
                     onBlur={(e) => e.currentTarget.style.borderColor = palette.border}
                   />

@@ -1,4 +1,3 @@
-import { Shield, Trophy, Medal } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 interface Badge {
@@ -17,12 +16,6 @@ interface DisciplineBadgesProps {
     data: BadgesData;
     palette: any;
 }
-
-const BADGE_ICONS = {
-    ironMind: Shield,
-    kellyMaster: Trophy,
-    tiltProof: Medal,
-};
 
 const BADGE_EMOJIS = {
     ironMind: '🧠',
@@ -48,7 +41,7 @@ export function DisciplineBadges({ data, palette }: DisciplineBadgesProps) {
         <div
             className="rounded-xl p-5"
             style={{
-                backgroundColor: palette.bgSecondary ?? palette.card,
+                backgroundColor: palette.secondary ?? palette.card,
                 border: `1px solid ${palette.border}`,
             }}
         >
@@ -83,7 +76,6 @@ export function DisciplineBadges({ data, palette }: DisciplineBadgesProps) {
             {/* Badge grid */}
             <div className="grid grid-cols-3 gap-3">
                 {badges.map((badge) => {
-                    const Icon = BADGE_ICONS[badge.id];
                     const emoji = BADGE_EMOJIS[badge.id];
                     const countKey = BADGE_COUNT_KEYS[badge.id];
                     const progressPercent = Math.min((badge.progress / badge.target) * 100, 100);
